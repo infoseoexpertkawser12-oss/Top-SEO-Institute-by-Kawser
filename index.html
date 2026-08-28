@@ -1,142 +1,1154 @@
+Kawser, [8/28/2026 1:55 PM]
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Top SEO Institute by Kawser - SEO, Google Ads, YouTube Growth and Digital Marketing services.">
-  <meta name="keywords" content="SEO Expert Kawser, SEO Services, Google Ads, YouTube SEO, Digital Marketing">
+<title>Top SEO Institute by Kawser | SEO & Digital Marketing</title>
 
-  <title>Top SEO Institute by Kawser | SEO & Digital Marketing</title>
+<meta name="description" content="Top SEO Institute by Kawser - Professional SEO, Google Ads, YouTube Growth, Local SEO and Digital Marketing Services.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7faff;
+    color:#172033;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(4,19,49,.97);
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+}
+
+.nav{
+    min-height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:800;
+}
+
+.logo img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:27px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#55ee19;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(48,226,15,.16),transparent 30%),
+    linear-gradient(135deg,#041331,#092f70 65%,#0751a8);
+    color:white;
+    padding:80px 0;
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-tag{
+    display:inline-block;
+    background:rgba(82,234,23,.12);
+    border:1px solid rgba(82,234,23,.5);
+    color:#67f334;
+    padding:8px 15px;
+    border-radius:30px;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:56px;
+    line-height:1.08;
+    margin-bottom:23px;
+}
+
+.hero h1 span{
+    color:#55ef19;
+}
+
+.hero p{
+    color:#d8e7ff;
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:800;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#55ef19;
+    color:#06172f;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(85,239,25,.25);
+}
+
+.btn-outline{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#06172f;
+}
+
+.hero-photo{
+    text-align:center;
+}
+
+.hero-photo img{
+    width:350px;
+    height:430px;
+    object-fit:cover;
+    border-radius:25px;
+    border:6px solid rgba(255,255,255,.9);
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#061a40;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#66758c;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    margin-top:-45px;
+    position:relative;
+    z-index:5;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:white;
+    border-radius:18px;
+    box-shadow:0 15px 45px rgba(0,0,0,.1);
+    overflow:hidden;
+}
+
+.stat{
+    padding:30px 15px;
+    text-align:center;
+    border-right:1px solid #e6edf6;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+Kawser, [8/28/2026 1:55 PM]
+.stat h3{
+    color:#075ee8;
+    font-size:30px;
+}
+
+.stat p{
+    color:#64748b;
+    font-weight:600;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.about-photo{
+    text-align:center;
+}
+
+.about-photo img{
+    width:100%;
+    max-width:430px;
+    border-radius:22px;
+    box-shadow:0 20px 45px rgba(0,0,0,.13);
+}
+
+.about-content h2{
+    font-size:38px;
+    color:#061a40;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#526176;
+    margin-bottom:17px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#eef5ff;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:32px;
+    border-radius:17px;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+    border-top:4px solid #55e919;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.11);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:14px;
+}
+
+.card h3{
+    font-size:21px;
+    color:#071a3d;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#64748b;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.portfolio-card{
+    overflow:hidden;
+    background:white;
+    border-radius:17px;
+    box-shadow:0 8px 30px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-7px);
+}
+
+.portfolio-img{
+    height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(135deg,#061a40,#0874e8);
+    color:white;
+    font-size:25px;
+    font-weight:900;
+}
+
+.portfolio-text{
+    padding:24px;
+}
+
+.portfolio-text h3{
+    color:#071a3d;
+    margin-bottom:8px;
+}
+
+.portfolio-text p{
+    color:#64748b;
+}
+
+/* ================= REVIEWS ================= */
+
+.testimonials{
+    background:#061a40;
+}
+
+.testimonials .section-title h2{
+    color:white;
+}
+
+.testimonials .section-title p{
+    color:#b9c9e4;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:17px;
+}
+
+.stars{
+    color:#f59e0b;
+    font-size:21px;
+    margin-bottom:15px;
+}
+
+.review p{
+    color:#526176;
+}
+
+.review h4{
+    color:#071a3d;
+    margin-top:17px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#f1f6ff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-grid h2{
+    color:#061a40;
+    margin-bottom:10px;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-item{
+    background:white;
+    padding:19px 22px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.contact-item strong{
+    color:#061a40;
+}
+
+.contact-item a{
+    color:#075ee8;
+    text-decoration:none;
+    word-break:break-word;
+}
+
+.social{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.social a{
+    padding:12px 18px;
+    border-radius:8px;
+    background:#061a40;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#55ef19;
+    color:#061a40;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#030d20;
+    color:#b8c5d8;
+    padding:35px 0;
+    text-align:center;
+}
+
+footer strong{
+    color:#55ef19;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    font-size:29px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:1000;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+Kawser, [8/28/2026 1:55 PM]
+.nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        background:#061a40;
+        flex-direction:column;
+        padding:25px;
+        gap:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-content,
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-photo img{
+        width:280px;
+        height:350px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-photo img{
+        max-width:320px;
+    }
+
+    .social{
+        justify-content:center;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:65px 0;
+    }
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2,
+    .about-content h2{
+        font-size:30px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        padding:22px 8px;
+    }
+
+    .stat h3{
+        font-size:24px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="container nav-inner">
+<!-- ================= NAVBAR ================= -->
 
-    <a href="#home" class="brand">
-      <img src="logo.png" alt="Top SEO Institute by Kawser Logo">
-      <span>Top SEO Institute</span>
-    </a>
+<header>
+<div class="container nav">
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<a href="#home" class="logo">
+<img src="logo.png" alt="Top SEO Institute by Kawser Logo">
+Top SEO Institute
+</a>
 
-    <a class="nav-button" href="https://wa.me/8801335044218" target="_blank">
-      WhatsApp
-    </a>
+<div class="menu" onclick="toggleMenu()">☰</div>
 
-  </div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
 </header>
 
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="container hero-grid">
+<!-- ================= HERO ================= -->
 
-    <div class="hero-content">
+<section class="hero" id="home">
 
-      <div class="badge">🚀 SEO • Google Ads • YouTube Growth</div>
+<div class="container hero-content">
 
-      <h1>
-        Grow Your Business
-        <span>With Smart Digital Marketing</span>
-      </h1>
+<div>
 
-      <p>
-        Hi, I'm <strong>Kawser</strong> — an SEO & Digital Marketing professional
-        helping businesses improve their online visibility, generate leads and
-        grow their digital presence.
-      </p>
+<div class="hero-tag">
+🚀 SEO & Digital Marketing Expert
+</div>
 
-      <div class="hero-buttons">
-        <a href="#contact" class="btn primary">Contact Me</a>
-        <a href="#portfolio" class="btn secondary">View Portfolio</a>
-      </div>
+<h1>
+Grow Your Business With
+<span>SEO & Digital Marketing</span>
+</h1>
 
-      <div class="social-mini">
-        <a href="https://www.facebook.com/profile.php?id=61593758972703" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/topseo.expertkawser" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/md-kawser-b77733271" target="_blank">LinkedIn</a>
-        <a href="https://youtube.com/@topseoexpert3" target="_blank">YouTube</a>
-      </div>
+<p>
+Welcome to <strong>Top SEO Institute by Kawser</strong>.
+I help businesses increase visibility, generate quality leads and grow online with professional SEO, Google Ads, YouTube Growth and Digital Marketing strategies.
+</p>
 
-    </div>
+<div class="buttons">
 
-    <div class="hero-photo">
-      <div class="photo-circle">
-        <img src="kawser-photo.png" alt="Kawser - SEO Expert">
-      </div>
+<a href="#contact" class="btn btn-primary">
+Contact Me
+</a>
 
-      <div class="floating-card">
-        <strong>SEO Expert</strong>
-        <span>Helping Businesses Grow Online</span>
-      </div>
-    </div>
+<a href="#portfolio" class="btn btn-outline">
+View Portfolio
+</a>
 
-  </div>
+</div>
+
+</div>
+
+<div class="hero-photo">
+
+<img src="kawser-photo.png" alt="Kawser - SEO Expert">
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container about-grid">
+<!-- ================= STATS ================= -->
 
-    <div class="about-image">
-      <img src="kawser-photo.png" alt="Kawser">
-    </div>
+<div class="stats">
 
-    <div class="about-content">
-      <div class="section-label">ABOUT ME</div>
+<div class="container">
 
-      <h2>Hi, I'm <span>Kawser</span></h2>
+<div class="stats-grid">
 
-      <p>
-        I am an SEO and Digital Marketing professional focused on helping
-        businesses build stronger online visibility and attract more customers.
-      </p>
+<div class="stat">
+<h3>SEO</h3>
+<p>Expert Strategy</p>
+</div>
 
-      <p>
-        My work includes SEO, Google Ads, YouTube SEO, YouTube growth,
-        local SEO, website optimization and digital marketing strategies.
-      </p>
+<div class="stat">
+<h3>Google Ads</h3>
+<p>Lead Generation</p>
+</div>
 
-      <div class="stats">
-        <div>
-          <strong>SEO</strong>
-          <span>Optimization</span>
-        </div>
+<div class="stat">
+<h3>YouTube</h3>
+<p>Channel Growth</p>
+</div>
 
-        <div>
-          <strong>Ads</strong>
-          <span>Lead Generation</span>
-        </div>
+<div class="stat">
+<h3>100%</h3>
+<p>Professional Support</p>
+</div>
 
-        <div>
-          <strong>YouTube</strong>
-          <span>Growth</span>
-        </div>
-      </div>
-    </div>
+</div>
 
-  </div>
+</div>
+
+</div>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Me</h2>
+<p>Helping businesses build a stronger online presence</p>
+</div>
+
+<div class="about">
+
+<div class="about-photo">
+<img src="kawser-photo.png" alt="Kawser">
+</div>
+
+<div class="about-content">
+
+<h2>Hi, I'm Kawser 👋</h2>
+
+<p>
+I'm a Digital Marketing and SEO professional dedicated to helping businesses improve their online visibility and generate more customers.
+</p>
+
+<p>
+My expertise includes SEO, Google Ads, YouTube Growth, Local SEO, WordPress SEO, Shopify SEO and digital marketing strategies.
+</p>
+
+<p>
+I focus on practical strategies that help businesses get more traffic, leads, visibility and long-term growth.
+</p>
+
+<a href="#contact" class="btn btn-primary">
+Let's Work Together
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- SERVICES -->
-<section id="services" class="section dark-section">
-  <div class="container">
+<!-- ================= SERVICES ================= -->
+
+Kawser, [8/28/2026 1:55 PM]
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>My Services</h2>
+<p>Professional solutions for online growth</p>
+</div>
+
+<div class="service-grid">
+
+<div class="card">
+<div class="icon">🔎</div>
+<h3>SEO Services</h3>
+<p>
+Complete SEO strategies including keyword research, on-page SEO, technical SEO and organic growth.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h3>Google Ads</h3>
+<p>
+High-intent Google Ads campaigns designed to generate quality leads, calls and potential customers.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">▶️</div>
+<h3>YouTube Growth</h3>
+<p>
+YouTube SEO, keyword research, titles, descriptions and optimization strategies for channel growth.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌎</div>
+<h3>Local SEO</h3>
+<p>
+Local SEO and Google Business Profile optimization to improve local visibility and customer reach.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛒</div>
+<h3>Shopify SEO</h3>
+<p>
+SEO optimization for Shopify websites and stores to increase organic traffic and potential sales.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>WordPress SEO</h3>
+<p>
+Professional WordPress SEO optimization including technical, on-page and performance improvements.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+<h2>My Portfolio</h2>
+<p>Selected areas of my digital marketing work</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+
+<div class="portfolio-img">
+SEO PROJECT
+</div>
+
+<div class="portfolio-text">
+<h3>SEO Optimization</h3>
+<p>
+Website SEO and organic growth strategies designed to improve search visibility.
+</p>
+</div>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<div class="portfolio-img">
+GOOGLE ADS
+</div>
+
+<div class="portfolio-text">
+<h3>Lead Generation</h3>
+<p>
+Google Ads campaigns focused on reaching high-intent users and generating leads.
+</p>
+</div>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<div class="portfolio-img">
+YOUTUBE GROWTH
+</div>
+
+<div class="portfolio-text">
+<h3>YouTube Marketing</h3>
+<p>
+YouTube SEO and channel optimization strategies for better reach and growth.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="testimonials" id="reviews">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Client Reviews</h2>
+
+<p>
+What clients say about working with me
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Great communication and excellent SEO work. Very professional and helpful."
+</p>
+
+<h4>— Happy Client</h4>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Excellent digital marketing support. The work was completed professionally and on time."
+</p>
+
+<h4>— Satisfied Client</h4>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+"Very knowledgeable about SEO and Google Ads. Highly recommended."
+</p>
+
+<h4>— Business Owner</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Let's Work Together</h2>
+
+<p>
+Have a project or need digital marketing help? Contact me today.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div>
+
+<h2>Contact Information</h2>
+
+<br>
+
+<div class="contact-info">
+
+<div class="contact-item">
+
+<strong>📧 Email</strong><br>
+
+<a href="mailto:topseo.expertskawser@gmail.com">
+topseo.expertskawser@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>📱 WhatsApp</strong><br>
+
+<a href="https://wa.me/8801335044218" target="_blank">
++880 1335-044218
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>📞 Phone / WhatsApp</strong><br>
+
+<a href="https://wa.me/8801764748654" target="_blank">
++880 1764-746854
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>📍 Location</strong><br>
+
+Bangladesh
+
+</div>
+
+</div>
+
+</div>
+
+
+<div>
+
+Kawser, [8/28/2026 1:55 PM]
+<h2>Connect With Me</h2>
+
+<br>
+
+<div class="social">
+
+<a href="https://www.facebook.com/profile.php?id=61593758972703" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.instagram.com/topseo.expertkawser" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.linkedin.com/in/md-kawser-b77733271" target="_blank">
+LinkedIn
+</a>
+
+<a href="https://kwork.com/user/ProSEOGuru" target="_blank">
+Kwork
+</a>
+
+<a href="https://youtube.com/@topseoexpert3" target="_blank">
+YouTube
+</a>
+
+<a href="mailto:topseo.expertskawser@gmail.com">
+Email
+</a>
+
+</div>
+
+<br>
+
+<a
+href="https://wa.me/8801335044218"
+class="btn btn-primary"
+target="_blank">
+
+💬 Contact Me on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 <strong>Top SEO Institute by Kawser</strong>.
+All Rights Reserved.
+</p>
+
+<p>
+SEO • Google Ads • YouTube Growth • Digital Marketing
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/8801335044218"
+target="_blank"
+title="Chat on WhatsApp">
+
+💬
+
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

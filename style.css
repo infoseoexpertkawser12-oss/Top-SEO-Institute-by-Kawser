@@ -1,4 +1,13 @@
-Kawser, [8/28/2026 2:25 PM]
+Kawser, [8/28/2026 3:13 PM]
+/* =========================================================
+   TOP SEO INSTITUTE BY KAWSER
+   Main Stylesheet
+========================================================= */
+
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +16,7 @@ Kawser, [8/28/2026 2:25 PM]
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -14,11 +24,12 @@ body {
   color: #172033;
   background: #ffffff;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -26,21 +37,31 @@ img {
   display: block;
 }
 
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
 .container {
   width: min(1120px, 92%);
-  margin: auto;
+  margin: 0 auto;
 }
 
 
-/* NAVBAR */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.96);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid #e8edf5;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .nav-inner {
@@ -55,50 +76,101 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
+  flex-shrink: 0;
   font-size: 18px;
+  font-weight: 800;
+  color: #172033;
 }
 
 .brand img {
   width: 45px;
   height: 45px;
   object-fit: contain;
+  border-radius: 50%;
+}
+
+.brand span {
+  white-space: nowrap;
 }
 
 nav {
   display: flex;
-  gap: 22px;
   align-items: center;
+  justify-content: center;
+  gap: 22px;
 }
 
 nav a {
+  position: relative;
+  padding: 8px 0;
+  color: #536078;
   font-size: 14px;
   font-weight: 600;
-  color: #536078;
-  transition: 0.3s;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background: #2563eb;
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
   color: #2563eb;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
 .nav-button {
-  background: #2563eb;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 11px 18px;
   border-radius: 10px;
-  font-weight: 700;
+  background: #2563eb;
+  color: #ffffff;
   font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.20);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
-  padding: 100px 0;
+  position: relative;
+  padding: 105px 0;
+  overflow: hidden;
   background:
-    radial-gradient(circle at top right, #dbeafe, transparent 35%),
-    linear-gradient(135deg, #f8fbff, #ffffff);
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(219, 234, 254, 0.95),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(239, 246, 255, 0.9),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #f8fbff 0%, #ffffff 65%);
 }
 
 .hero-grid {
@@ -108,22 +180,32 @@ nav a:hover {
   align-items: center;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 .badge {
-  display: inline-block;
-  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
   border-radius: 50px;
   background: #eff6ff;
   color: #2563eb;
-  font-weight: 700;
   font-size: 13px;
-  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .hero h1 {
+  max-width: 750px;
+  margin-bottom: 25px;
+  color: #172033;
   font-size: clamp(42px, 6vw, 70px);
   line-height: 1.08;
-  letter-spacing: -2px;
-  margin-bottom: 25px;
+  letter-spacing: -2.5px;
+  font-weight: 800;
 }
 
 .hero h1 span {
@@ -135,36 +217,57 @@ nav a:hover {
   max-width: 650px;
   color: #667085;
   font-size: 18px;
+  line-height: 1.8;
+}
+
+.hero p strong {
+  color: #172033;
 }
 
 .hero-buttons {
   display: flex;
+  align-items: center;
   gap: 15px;
   margin: 30px 0;
   flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
   padding: 14px 24px;
   border-radius: 11px;
   font-weight: 800;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .primary {
   background: #2563eb;
-  color: white;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.22);
+}
+
+Kawser, [8/28/2026 3:13 PM]
+.primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.30);
 }
 
 .secondary {
   border: 2px solid #d7deea;
+  background: #ffffff;
   color: #172033;
-  background: white;
+}
+
+.secondary:hover {
+  border-color: #2563eb;
+  color: #2563eb;
 }
 
 .big-btn {
@@ -173,38 +276,55 @@ nav a:hover {
 
 .whatsapp-btn {
   background: #16a34a;
-  color: white;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.20);
+}
+
+.whatsapp-btn:hover {
+  background: #15803d;
 }
 
 .social-mini {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 18px;
 }
 
 .social-mini a {
   color: #536078;
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
 .social-mini a:hover {
   color: #2563eb;
 }
 
+
+/* =========================================================
+   HERO PHOTO
+========================================================= */
+
 .hero-photo {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
+  min-height: 400px;
 }
 
 .photo-circle {
+  position: relative;
   width: 360px;
   height: 360px;
-  border-radius: 50%;
   padding: 10px;
+  border-radius: 50%;
   background: linear-gradient(135deg, #2563eb, #60a5fa);
-  box-shadow: 0 30px 80px rgba(37, 99, 235, 0.25);
+  box-shadow:
+    0 30px 80px rgba(37, 99, 235, 0.25),
+    0 0 0 12px rgba(219, 234, 254, 0.55);
 }
 
 .photo-circle img {
@@ -212,61 +332,75 @@ nav a:hover {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  background: white;
+  background: #ffffff;
 }
 
 .floating-card {
   position: absolute;
-  bottom: 20px;
-  left: 10px;
-  background: white;
+  left: 5px;
+  bottom: 15px;
+  min-width: 220px;
   padding: 17px 22px;
+  border: 1px solid #e8edf5;
   border-radius: 14px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
 }
 
 .floating-card strong {
   display: block;
+  margin-bottom: 2px;
+  color: #172033;
+  font-size: 15px;
 }
 
 .floating-card span {
+  display: block;
   color: #667085;
   font-size: 12px;
 }
 
 
-/* GENERAL SECTION */
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
 
 .section {
   padding: 100px 0;
 }
 
 .section-heading {
-  text-align: center;
   max-width: 700px;
   margin: 0 auto 55px;
+  text-align: center;
 }
 
 .section-label {
+  margin-bottom: 8px;
   color: #2563eb;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 2px;
-  margin-bottom: 8px;
 }
 
 .section-heading h2 {
+  margin-bottom: 12px;
+  color: #172033;
   font-size: clamp(32px, 5vw, 48px);
   line-height: 1.15;
-  margin-bottom: 12px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .section-heading p {
   color: #667085;
+  font-size: 15px;
 }
 
 
-/* ABOUT */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about-grid {
   display: grid;
@@ -277,8 +411,10 @@ nav a:hover {
 
 .about-image {
   padding: 15px;
+  border: 1px solid #dbeafe;
   border-radius: 25px;
   background: #eff6ff;
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.08);
 }
 
 .about-image img {
@@ -287,8 +423,10 @@ nav a:hover {
 }
 
 .about-content h2 {
-  font-size: 46px;
   margin-bottom: 20px;
+  color: #172033;
+  font-size: 46px;
+  line-height: 1.15;
 }
 
 .about-content h2 span {
@@ -296,11 +434,11 @@ nav a:hover {
 }
 
 .about-content p {
-  color: #667085;
   margin-bottom: 18px;
+  color: #667085;
+  font-size: 15px;
 }
 
-Kawser, [8/28/2026 2:25 PM]
 .stats {
   display: flex;
   gap: 15px;
@@ -309,10 +447,18 @@ Kawser, [8/28/2026 2:25 PM]
 }
 
 .stats div {
+  min-width: 120px;
   padding: 17px 22px;
-  background: #f8fafc;
   border: 1px solid #e6ebf2;
   border-radius: 13px;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.stats div:hover {
+  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  background: #eff6ff;
 }
 
 .stats strong,
@@ -322,19 +468,46 @@ Kawser, [8/28/2026 2:25 PM]
 
 .stats strong {
   color: #2563eb;
+  font-size: 15px;
 }
 
 .stats span {
-  font-size: 12px;
   color: #667085;
+  font-size: 12px;
 }
 
 
-/* DARK SECTION */
+/* =========================================================
+   DARK SECTION / SERVICES
+========================================================= */
 
 .dark-section {
+  position: relative;
+  overflow: hidden;
   background: #0f172a;
-  color: white;
+  color: #ffffff;
+}
+
+.dark-section::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  right: -180px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  pointer-events: none;
+}
+
+Kawser, [8/28/2026 3:13 PM]
+.dark-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.dark-section .section-heading h2 {
+  color: #ffffff;
 }
 
 .dark-section .section-heading p {
@@ -350,32 +523,46 @@ Kawser, [8/28/2026 2:25 PM]
 .service-card {
   padding: 32px;
   border: 1px solid #26334a;
-  background: #141f33;
   border-radius: 18px;
-  transition: 0.3s;
+  background: #141f33;
+  transition: all 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
   border-color: #3b82f6;
+  background: #17243b;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
 .service-icon {
-  font-size: 32px;
-  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  background: rgba(37, 99, 235, 0.13);
+  font-size: 28px;
 }
 
 .service-card h3 {
   margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .service-card p {
   color: #aab4c7;
   font-size: 14px;
+  line-height: 1.8;
 }
 
 
-/* PORTFOLIO */
+/* =========================================================
+   PORTFOLIO
+========================================================= */
 
 .portfolio-grid {
   display: grid;
@@ -386,32 +573,54 @@ Kawser, [8/28/2026 2:25 PM]
 .portfolio-card {
   position: relative;
   padding: 35px;
+  overflow: hidden;
   border: 1px solid #e4e9f1;
   border-radius: 18px;
-  overflow: hidden;
-  transition: 0.3s;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #2563eb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .portfolio-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+  border-color: #dbeafe;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card:hover::before {
+  transform: scaleX(1);
 }
 
 .portfolio-number {
+  margin-bottom: 15px;
+  color: #e8f0ff;
   font-size: 50px;
   font-weight: 800;
-  color: #e8f0ff;
-  margin-bottom: 15px;
+  line-height: 1;
 }
 
 .portfolio-card h3 {
   margin-bottom: 10px;
+  color: #172033;
+  font-size: 20px;
 }
 
 .portfolio-card p {
+  margin-bottom: 20px;
   color: #667085;
   font-size: 14px;
-  margin-bottom: 20px;
 }
 
 .portfolio-card span {
@@ -425,7 +634,9 @@ Kawser, [8/28/2026 2:25 PM]
 }
 
 
-/* REVIEWS */
+/* =========================================================
+   REVIEWS
+========================================================= */
 
 .reviews-section {
   background: #f8fafc;
@@ -438,25 +649,35 @@ Kawser, [8/28/2026 2:25 PM]
 }
 
 .review-card {
-  background: white;
   padding: 30px;
-  border-radius: 18px;
   border: 1px solid #e7ebf2;
+  border-radius: 18px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
 }
 
 .stars {
+  margin-bottom: 15px;
   color: #f59e0b;
   font-size: 20px;
-  margin-bottom: 15px;
+  letter-spacing: 2px;
 }
 
 .review-card p {
-  color: #667085;
   margin-bottom: 20px;
+  color: #667085;
+  font-size: 14px;
 }
 
 .review-card h4 {
   margin-bottom: 2px;
+  color: #172033;
+  font-size: 15px;
 }
 
 .review-card span {
@@ -465,7 +686,9 @@ Kawser, [8/28/2026 2:25 PM]
 }
 
 
-/* SOCIAL */
+/* =========================================================
+   SOCIAL
+========================================================= */
 
 .social-section {
   padding: 100px 0;
@@ -482,13 +705,15 @@ Kawser, [8/28/2026 2:25 PM]
   padding: 25px 18px;
   border: 1px solid #e4e9f1;
   border-radius: 15px;
+  background: #ffffff;
   text-align: center;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .social-card:hover {
   transform: translateY(-5px);
   border-color: #2563eb;
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.08);
 }
 
 .social-card strong,
@@ -498,20 +723,25 @@ Kawser, [8/28/2026 2:25 PM]
 
 .social-card strong {
   margin-bottom: 5px;
+  color: #172033;
+  font-size: 14px;
 }
 
 .social-card span {
-  font-size: 12px;
   color: #667085;
+  font-size: 12px;
 }
 
 
-/* CONTACT */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact-section {
   background: #f8fafc;
 }
 
+Kawser, [8/28/2026 3:13 PM]
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -519,26 +749,36 @@ Kawser, [8/28/2026 2:25 PM]
 }
 
 .contact-card {
-  background: white;
+  padding: 25px;
   border: 1px solid #e4e9f1;
   border-radius: 16px;
-  padding: 25px;
-  transition: 0.3s;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+a.contact-card {
+  cursor: pointer;
 }
 
 .contact-card:hover {
   transform: translateY(-4px);
   border-color: #2563eb;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.07);
 }
 
 .contact-icon {
-  font-size: 28px;
   margin-bottom: 10px;
+  font-size: 28px;
 }
 
 .contact-card strong,
 .contact-card span {
   display: block;
+}
+
+.contact-card strong {
+  margin-bottom: 3px;
+  color: #172033;
 }
 
 .contact-card span {
@@ -548,25 +788,28 @@ Kawser, [8/28/2026 2:25 PM]
 }
 
 .contact-button-area {
-  text-align: center;
-  margin-top: 45px;
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 15px;
+  margin-top: 45px;
   flex-wrap: wrap;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
-  background: #0b1220;
-  color: white;
   padding-top: 45px;
+  background: #0b1220;
+  color: #ffffff;
 }
 
 .footer-inner {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 30px;
   padding-bottom: 35px;
@@ -574,6 +817,8 @@ footer {
 
 .footer-inner h3 {
   margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .footer-inner p {
@@ -590,52 +835,106 @@ footer {
 .footer-links a {
   color: #c5cedd;
   font-size: 13px;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .copyright {
-  text-align: center;
-  border-top: 1px solid #202b3d;
   padding: 20px;
+  border-top: 1px solid #202b3d;
   color: #8995aa;
   font-size: 12px;
+  text-align: center;
 }
 
 
-/* FLOATING WHATSAPP */
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
 
-Kawser, [8/28/2026 2:25 PM]
 .floating-whatsapp {
   position: fixed;
   right: 22px;
   bottom: 22px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 58px;
   height: 58px;
+  border: 3px solid #ffffff;
   border-radius: 50%;
   background: #16a34a;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #ffffff;
   font-size: 27px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  z-index: 999;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+  transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+  background: #15803d;
+  box-shadow: 0 14px 35px rgba(22, 163, 74, 0.30);
 }
 
 
-/* MOBILE */
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .nav-inner {
+    gap: 15px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero-grid {
+    gap: 45px;
+  }
+
+  .services-grid,
+  .portfolio-grid,
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
 
 @media (max-width: 900px) {
+
+  .nav-inner {
+    min-height: 70px;
+  }
 
   nav {
     display: none;
   }
 
   .nav-button {
-    padding: 9px 13px;
+    padding: 9px 14px;
+  }
+
+  .hero {
+    padding: 80px 0;
   }
 
   .hero-grid,
@@ -644,8 +943,14 @@ Kawser, [8/28/2026 2:25 PM]
     text-align: center;
   }
 
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero p {
-    margin: auto;
+    margin: 0 auto;
   }
 
   .hero-buttons,
@@ -654,30 +959,38 @@ Kawser, [8/28/2026 2:25 PM]
   }
 
   .hero-photo {
-    margin-top: 20px;
+    min-height: auto;
+    margin-top: 30px;
   }
 
-  .services-grid,
-  .portfolio-grid,
-  .reviews-grid {
-    grid-template-columns: 1fr 1fr;
+  .about-content {
+    text-align: center;
   }
 
-  .social-grid {
-    grid-template-columns: 1fr 1fr;
+  .about-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .stats {
+    justify-content: center;
   }
 
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about-content h2 {
-    font-size: 38px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
+
+  .container {
+    width: min(92%, 500px);
+  }
 
   .section,
   .social-section {
@@ -689,731 +1002,18 @@ Kawser, [8/28/2026 2:25 PM]
   }
 
   .hero h1 {
-    font-size: 43px;
+    font-size: clamp(38px, 11vw, 48px);
+    letter-spacing: -1.5px;
   }
 
-  .photo-circle {
-    width: 280px;
-    height: 280px;
+  .hero p {
+    font-size: 16px;
   }
 
-  .floating-card {
-    left: 0;
-  }
-
-  .services-grid,
-  .portfolio-grid,
-  .reviews-grid,
-  .social-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-  }
-
-  .brand span {
-    display: none;
-  }
-
-  .nav-inner {
-    min-height: 65px;
-  }
-}
-
-Kawser, [8/28/2026 2:25 PM]
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  color: #172033;
-  background: #ffffff;
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1120px, 92%);
-  margin: auto;
-}
-
-
-/* NAVBAR */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.96);
-  border-bottom: 1px solid #e8edf5;
-  backdrop-filter: blur(10px);
-}
-
-.nav-inner {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 18px;
-}
-
-.brand img {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
-}
-
-nav {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-}
-
-nav a {
-  font-size: 14px;
-  font-weight: 600;
-  color: #536078;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #2563eb;
-}
-
-.nav-button {
-  background: #2563eb;
-  color: white;
-  padding: 11px 18px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-
-/* HERO */
-
-.hero {
-  padding: 100px 0;
-  background:
-    radial-gradient(circle at top right, #dbeafe, transparent 35%),
-    linear-gradient(135deg, #f8fbff, #ffffff);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 70px;
-  align-items: center;
-}
-
+Kawser, [8/28/2026 3:13 PM]
 .badge {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 50px;
-  background: #eff6ff;
-  color: #2563eb;
-  font-weight: 700;
-  font-size: 13px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 6vw, 70px);
-  line-height: 1.08;
-  letter-spacing: -2px;
-  margin-bottom: 25px;
-}
-
-.hero h1 span {
-  display: block;
-  color: #2563eb;
-}
-
-.hero p {
-  max-width: 650px;
-  color: #667085;
-  font-size: 18px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin: 30px 0;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 24px;
-  border-radius: 11px;
-  font-weight: 800;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.primary {
-  background: #2563eb;
-  color: white;
-}
-
-.secondary {
-  border: 2px solid #d7deea;
-  color: #172033;
-  background: white;
-}
-
-.big-btn {
-  padding: 16px 30px;
-}
-
-.whatsapp-btn {
-  background: #16a34a;
-  color: white;
-}
-
-.social-mini {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-.social-mini a {
-  color: #536078;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.social-mini a:hover {
-  color: #2563eb;
-}
-
-.hero-photo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.photo-circle {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  padding: 10px;
-  background: linear-gradient(135deg, #2563eb, #60a5fa);
-  box-shadow: 0 30px 80px rgba(37, 99, 235, 0.25);
-}
-
-.photo-circle img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  background: white;
-}
-
-.floating-card {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  background: white;
-  padding: 17px 22px;
-  border-radius: 14px;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
-}
-
-.floating-card strong {
-  display: block;
-}
-
-.floating-card span {
-  color: #667085;
-  font-size: 12px;
-}
-
-
-/* GENERAL SECTION */
-
-.section {
-  padding: 100px 0;
-}
-
-.section-heading {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 55px;
-}
-
-.section-label {
-  color: #2563eb;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-}
-
-.section-heading h2 {
-  font-size: clamp(32px, 5vw, 48px);
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-
-.section-heading p {
-  color: #667085;
-}
-
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 70px;
-  align-items: center;
-}
-
-.about-image {
-  padding: 15px;
-  border-radius: 25px;
-  background: #eff6ff;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 18px;
-}
-
-.about-content h2 {
-  font-size: 46px;
-  margin-bottom: 20px;
-}
-
-.about-content h2 span {
-  color: #2563eb;
-}
-
-.about-content p {
-  color: #667085;
-  margin-bottom: 18px;
-}
-
-Kawser, [8/28/2026 2:25 PM]
-.stats {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.stats div {
-  padding: 17px 22px;
-  background: #f8fafc;
-  border: 1px solid #e6ebf2;
-  border-radius: 13px;
-}
-
-.stats strong,
-.stats span {
-  display: block;
-}
-
-.stats strong {
-  color: #2563eb;
-}
-
-.stats span {
-  font-size: 12px;
-  color: #667085;
-}
-
-
-/* DARK SECTION */
-
-.dark-section {
-  background: #0f172a;
-  color: white;
-}
-
-.dark-section .section-heading p {
-  color: #aab4c7;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.service-card {
-  padding: 32px;
-  border: 1px solid #26334a;
-  background: #141f33;
-  border-radius: 18px;
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  border-color: #3b82f6;
-}
-
-.service-icon {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  color: #aab4c7;
-  font-size: 14px;
-}
-
-
-/* PORTFOLIO */
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.portfolio-card {
-  position: relative;
-  padding: 35px;
-  border: 1px solid #e4e9f1;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
-}
-
-.portfolio-number {
-  font-size: 50px;
-  font-weight: 800;
-  color: #e8f0ff;
-  margin-bottom: 15px;
-}
-
-.portfolio-card h3 {
-  margin-bottom: 10px;
-}
-
-.portfolio-card p {
-  color: #667085;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.portfolio-card span {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: #eff6ff;
-  color: #2563eb;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-
-/* REVIEWS */
-
-.reviews-section {
-  background: #f8fafc;
-}
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.review-card {
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  border: 1px solid #e7ebf2;
-}
-
-.stars {
-  color: #f59e0b;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-.review-card p {
-  color: #667085;
-  margin-bottom: 20px;
-}
-
-.review-card h4 {
-  margin-bottom: 2px;
-}
-
-.review-card span {
-  color: #8a94a6;
-  font-size: 13px;
-}
-
-
-/* SOCIAL */
-
-.social-section {
-  padding: 100px 0;
-  background: #ffffff;
-}
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-}
-
-.social-card {
-  padding: 25px 18px;
-  border: 1px solid #e4e9f1;
-  border-radius: 15px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.social-card:hover {
-  transform: translateY(-5px);
-  border-color: #2563eb;
-}
-
-.social-card strong,
-.social-card span {
-  display: block;
-}
-
-.social-card strong {
-  margin-bottom: 5px;
-}
-
-.social-card span {
-  font-size: 12px;
-  color: #667085;
-}
-
-
-/* CONTACT */
-
-.contact-section {
-  background: #f8fafc;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.contact-card {
-  background: white;
-  border: 1px solid #e4e9f1;
-  border-radius: 16px;
-  padding: 25px;
-  transition: 0.3s;
-}
-
-.contact-card:hover {
-  transform: translateY(-4px);
-  border-color: #2563eb;
-}
-
-.contact-icon {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.contact-card strong,
-.contact-card span {
-  display: block;
-}
-
-.contact-card span {
-  color: #667085;
-  font-size: 13px;
-  word-break: break-word;
-}
-
-.contact-button-area {
-  text-align: center;
-  margin-top: 45px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-
-/* FOOTER */
-
-footer {
-  background: #0b1220;
-  color: white;
-  padding-top: 45px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  padding-bottom: 35px;
-}
-
-.footer-inner h3 {
-  margin-bottom: 8px;
-}
-
-.footer-inner p {
-  color: #9aa6ba;
-  font-size: 13px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
-  color: #c5cedd;
-  font-size: 13px;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
-.copyright {
-  text-align: center;
-  border-top: 1px solid #202b3d;
-  padding: 20px;
-  color: #8995aa;
-  font-size: 12px;
-}
-
-
-/* FLOATING WHATSAPP */
-
-Kawser, [8/28/2026 2:25 PM]
-.floating-whatsapp {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #16a34a;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 27px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-
-  nav {
-    display: none;
-  }
-
-  .nav-button {
-    padding: 9px 13px;
-  }
-
-  .hero-grid,
-  .about-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero p {
-    margin: auto;
-  }
-
-  .hero-buttons,
-  .social-mini {
-    justify-content: center;
-  }
-
-  .hero-photo {
-    margin-top: 20px;
-  }
-
-  .services-grid,
-  .portfolio-grid,
-  .reviews-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .social-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .about-content h2 {
-    font-size: 38px;
-  }
-}
-
-
-@media (max-width: 600px) {
-
-  .section,
-  .social-section {
-    padding: 70px 0;
-  }
-
-  .hero {
-    padding: 70px 0;
-  }
-
-  .hero h1 {
-    font-size: 43px;
+    font-size: 11px;
+    padding: 7px 12px;
   }
 
   .photo-circle {
@@ -1422,7 +1022,15 @@ Kawser, [8/28/2026 2:25 PM]
   }
 
   .floating-card {
-    left: 0;
+    left: 50%;
+    bottom: -15px;
+    min-width: 210px;
+    padding: 14px 17px;
+    transform: translateX(-50%);
+  }
+
+  .hero-photo {
+    padding-bottom: 45px;
   }
 
   .services-grid,
@@ -1433,15 +1041,136 @@ Kawser, [8/28/2026 2:25 PM]
     grid-template-columns: 1fr;
   }
 
+  .service-card,
+  .portfolio-card,
+  .review-card {
+    padding: 27px;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .about-content h2 {
+    font-size: 38px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .stats {
+    gap: 10px;
+  }
+
+  .stats div {
+    flex: 1 1 100px;
+    padding: 14px 12px;
+  }
+
+  .contact-button-area {
+    flex-direction: column;
+  }
+
+  .contact-button-area .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .footer-inner {
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 
   .brand span {
     display: none;
   }
 
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
   .nav-inner {
     min-height: 65px;
+  }
+
+  .nav-button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .floating-whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .photo-circle {
+    width: 245px;
+    height: 245px;
+  }
+
+  .floating-card {
+    min-width: 190px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .social-mini {
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }

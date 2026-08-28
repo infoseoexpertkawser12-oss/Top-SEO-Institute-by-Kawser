@@ -1,4 +1,4 @@
-Kawser, [8/28/2026 3:16 PM]
+
 document.addEventListener("DOMContentLoaded", function () {
 
   /* =========================================
